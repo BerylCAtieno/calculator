@@ -21,17 +21,17 @@
 }
 
 #display-container {
-    width: 200px;
+    width: 300px;
     height: 100px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 20px;
 }
 #display {
-    width: 250px;
+    width: 280px;
     height: 60px;
     border: none;
+    align-self: flex-end;
 }
 
 #delete {
@@ -69,8 +69,19 @@
     width: 250px;
 }
 
+#display {
+    width: 280px;
+    font-size: 1.5em; /* Adjust font size for prominence */
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333; /* Text color */
+    text-align: right; /* Right-aligns the content */
+    padding: 10px 20px; /* Adds some space around text */
+    box-sizing: border-box;
+    overflow: hidden; /* Prevents overflow if content is too long */
+}
 
-.cancel {color: red;}
+#cancel {color: red;}
 .sign {color: #00b300;}
 
 .equal {background: #00b300; color: white; border-radius: 100%}

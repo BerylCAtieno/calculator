@@ -4,6 +4,7 @@ const numberButtons = document.querySelectorAll(".number");
 const operationButtons = document.querySelectorAll(".sign")
 const deleteButton = document.getElementById("delete")
 const equalSign = document.getElementById("equal-sign")
+const cancelButton = document.getElementById("cancel")
 
 // Display Elements on Click
 
@@ -18,6 +19,21 @@ numberButtons.forEach(button => {
       display.value += button.value;
     });
   });
+
+// Delete and cancel functionality
+
+function deleteLastCharacter() {
+    displayValue = displayValue.slice(0, -1);
+    updateDisplay();
+}
+
+function clearDisplay() {
+    displayValue = "";
+    updateDisplay();
+}
+
+deleteButton.addEventListener('click', deleteLastCharacter);
+cancelButton.addEventListener('click', clearDisplay);
 
 
 function handleButtonClick(value) {
